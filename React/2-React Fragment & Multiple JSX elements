@@ -1,0 +1,48 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+
+// Rendering multiple jsx elements
+// We must add multiple elements inside one parent element e.g div etc
+
+// 1 using div 
+ReactDOM.render(
+  <div>                              
+  <h1> React is flexible! </h1>
+  <p> Hello World</p>
+  </div>,
+  document.getElementById('root')
+);
+
+// 2 using array
+
+ReactDOM.render(
+  [                            
+  <h1> React is flexible! </h1>,
+  <p> Hello World</p>,
+  ],
+  document.getElementById('root')
+);
+
+// Problem using div was that it creates an extra child div inside root div
+// could be a prob for us while working on css flexbox etc
+// So we can use React.Fragment to avoid this (if we dont want to use array which is hectic)
+
+ReactDOM.render(
+  <React.Fragment>                              
+  <h1> React is flexible! </h1>
+  <p> Hello World</p>
+  </React.Fragment>,
+  document.getElementById('root')
+);
+
+// Best and modern way for React Fragment
+
+ReactDOM.render(
+  <>                              
+  <h1> React is flexible! </h1>
+  <p> Hello World</p>
+  </>,
+  document.getElementById('root')
+);
