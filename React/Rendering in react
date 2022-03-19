@@ -1,0 +1,19 @@
+import React, { createElement } from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+
+// Render means to display.
+// Syntax of render function : ReactDom.render(what to display, where to display , callback function)
+
+ReactDOM.render(
+  <h1> React is flexible! </h1>,
+  document.getElementById('root')
+);
+
+
+// if we want to do it using pure javascript
+
+var h1 = document.createElement("h1");
+h1.innerHTML = "React is flexible!";
+document.getElementById("root").appendChild(h1);
